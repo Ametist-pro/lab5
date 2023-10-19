@@ -1,0 +1,101 @@
+<script>
+
+class Animal {
+constructor(food, location, name) {
+this.food = food;
+this.location = location;
+this.name = name;
+
+}
+
+makeNoise() {
+
+}
+
+eat() {
+
+}
+
+sleep() {
+
+}
+}
+
+class Dog extends Animal {
+constructor(food, location,name,say) {
+super(food, location,name);
+this.say = say;
+}
+
+makeNoise() {
+
+}
+
+eat() {
+
+}
+
+sleep() {
+
+}
+}
+
+class Cat extends Animal {
+constructor(food, location,name,say) {
+super(food, location,name);
+this.say = say;
+}
+
+makeNoise() {
+
+}
+
+eat() {
+
+}
+
+sleep() {
+
+}
+}
+
+class Horse extends Animal {
+constructor(food, location,name,say) {
+super(food, location,name);
+this.say = say;
+}
+
+makeNoise() {
+
+}
+
+eat() {
+
+}
+
+sleep() {
+
+}
+}
+
+class Veterinarian extends Animal {
+  treatAnimal(animal) {
+    document.writeln("Пришло животное: ", animal.name, "<br>");
+    document.writeln("Ест: ", animal.food, "<br>");
+    document.writeln("Место обитания: ", animal.location, "<br>");
+    document.writeln("Спит: " , animal.location, "<br>");
+    document.writeln("Говорит: " , animal.say, "<br>");
+    document.writeln("<br>");
+  }
+}
+
+const dog = new Dog("кости", "в будке","собака","гав-гав");
+const cat = new Cat("рыбу", "дома","кошка","мяу");
+const horse = new Horse("сено", "в сарае","лошадь","иго-го");
+
+let veterinarian = new Veterinarian();
+veterinarian.treatAnimal(dog);
+veterinarian.treatAnimal(cat);
+veterinarian.treatAnimal(horse);
+
+</script>
