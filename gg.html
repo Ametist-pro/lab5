@@ -1,10 +1,9 @@
 <script>
 
 class Animal {
-constructor(food, location, name) {
+constructor(food, location) {
 this.food = food;
 this.location = location;
-this.name = name;
 
 }
 
@@ -23,7 +22,8 @@ sleep() {
 
 class Dog extends Animal {
 constructor(food, location,name,say) {
-super(food, location,name);
+super(food, location);
+this.name = name;
 this.say = say;
 }
 
@@ -42,7 +42,8 @@ sleep() {
 
 class Cat extends Animal {
 constructor(food, location,name,say) {
-super(food, location,name);
+super(food, location);
+this.name = name;
 this.say = say;
 }
 
@@ -61,7 +62,8 @@ sleep() {
 
 class Horse extends Animal {
 constructor(food, location,name,say) {
-super(food, location,name);
+super(food, location);
+this.name = name;
 this.say = say;
 }
 
@@ -93,7 +95,7 @@ const dog = new Dog("кости", "в будке","собака","гав-гав"
 const cat = new Cat("рыбу", "дома","кошка","мяу");
 const horse = new Horse("сено", "в сарае","лошадь","иго-го");
 
-let veterinarian = new Veterinarian();
+var veterinarian = new Veterinarian();
 veterinarian.treatAnimal(dog);
 veterinarian.treatAnimal(cat);
 veterinarian.treatAnimal(horse);
