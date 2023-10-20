@@ -1,103 +1,104 @@
 <script>
 
-class Animal {
-constructor(food, location) {
-this.food = food;
-this.location = location;
+    class Animal {
+    constructor(food, location) {
+    this.food = food;
+    this.location = location;
+    
+    }
+    
+    makeNoise() {
+        document.writeln(`Такое-то животное говорит...`);
+    }
+    
+    eat() {
+        document.writeln(`Такое-то животное ест ${this.food}`);
 
-}
-
-makeNoise() {
-
-}
-
-eat() {
-
-}
-
-sleep() {
-
-}
-}
-
-class Dog extends Animal {
-constructor(food, location,name,say) {
-super(food, location);
-this.name = name;
-this.say = say;
-}
-
-makeNoise() {
-
-}
-
-eat() {
-
-}
-
-sleep() {
-
-}
-}
-
-class Cat extends Animal {
-constructor(food, location,name,say) {
-super(food, location);
-this.name = name;
-this.say = say;
-}
-
-makeNoise() {
-
-}
-
-eat() {
-
-}
-
-sleep() {
-
-}
-}
-
-class Horse extends Animal {
-constructor(food, location,name,say) {
-super(food, location);
-this.name = name;
-this.say = say;
-}
-
-makeNoise() {
-
-}
-
-eat() {
-
-}
-
-sleep() {
-
-}
-}
-
-class Veterinarian extends Animal {
-  treatAnimal(animal) {
-    document.writeln("Пришло животное: ", animal.name, "<br>");
-    document.writeln("Ест: ", animal.food, "<br>");
-    document.writeln("Место обитания: ", animal.location, "<br>");
-    document.writeln("Спит: " , animal.location, "<br>");
-    document.writeln("Говорит: " , animal.say, "<br>");
-    document.writeln("<br>");
-  }
-}
-
-const dog = new Dog("кости", "в будке","собака","гав-гав");
-const cat = new Cat("рыбу", "дома","кошка","мяу");
-const horse = new Horse("сено", "в сарае","лошадь","иго-го");
-
-var veterinarian = new Veterinarian();
-veterinarian.treatAnimal(dog);
-veterinarian.treatAnimal(cat);
-veterinarian.treatAnimal(horse);
-
-</script>
+    }
+    
+    sleep() {
+        document.writeln(`Такое-то животное спит ${this.location}`);
+    }
+    }
+    
+    class Dog extends Animal {
+    constructor(food, location,name,say) {
+    super(food, location);
+    this.name = name;
+    this.say = say;
+    }
+    
+    makeNoise() {
+        document.writeln(`${this.name} говорит ${this.say}`);
+    }
+    
+    eat() {
+        document.writeln(`${this.name} ест ${this.food}`);
+    }
+    
+    sleep() {
+        document.writeln(`${this.name} спит ${this.location}`);
+    }
+    }
+    
+    class Cat extends Animal {
+    constructor(food, location,name,say) {
+    super(food, location);
+    this.name = name;
+    this.say = say;
+    }
+    
+    makeNoise() {
+        document.writeln(`${this.name} говорит ${this.say}`);
+    }
+    
+    eat() {
+        document.writeln(`${this.name} ест ${this.food}`);
+    }
+    
+    sleep() {
+        document.writeln(`${this.name} спит ${this.location}`);
+    }
+    }
+    
+    class Horse extends Animal {
+    constructor(food, location,name,say) {
+    super(food, location);
+    this.name = name;
+    this.say = say;
+    }
+    
+    makeNoise() {
+        document.writeln(`${this.name} говорит ${this.say}`);
+    }
+    
+    eat() {
+        document.writeln(`${this.name} ест ${this.food}`);
+    }
+    
+    sleep() {
+        document.writeln(`${this.name} спит ${this.location}`);
+    }
+    }
+    
+    class Veterinarian extends Animal {
+      treatAnimal(animal) {
+        document.writeln("Пришло животное: ", animal.name, "<br>");
+        document.writeln("Ест: ", animal.food, "<br>");
+        document.writeln("Место обитания: ", animal.location, "<br>");
+        document.writeln("Спит: " , animal.location, "<br>");
+        document.writeln("Говорит: " , animal.say, "<br>");
+        document.writeln("<br>");
+      }
+    }
+    
+    const dog = new Dog("кости", "в будке","собака","гав-гав");
+    const cat = new Cat("рыбу", "дома","кошка","мяу");
+    const horse = new Horse("сено", "в сарае","лошадь","иго-го");
+    
+    var veterinarian = new Veterinarian();
+    veterinarian.treatAnimal(dog);
+    veterinarian.treatAnimal(cat);
+    veterinarian.treatAnimal(horse);
+    
+    </script>
